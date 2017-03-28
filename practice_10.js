@@ -15,11 +15,11 @@ $(function(){
 
 	});//end of submit function
 
-	person("Max", 29, "teacher");
+	//person("Max", 29, "teacher");
 
 });
 
-function fizzCheck  (input, fizz, buzz, fizzbuzz){
+function fizzCheck  (input){
 
 	for(var i = 0; i < input; i++) {
 		if(input % 3 === 0) {
@@ -36,7 +36,7 @@ function fizzCheck  (input, fizz, buzz, fizzbuzz){
 
 } 
 
-function person(name, age, profession) {
+//practice with Max. function person(name, age, profession) {
 // Max is 29 years old and is a teacher.
 	console.log(name + ' is ' + age + ' years old and is a ' + profession);
 }
