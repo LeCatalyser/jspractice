@@ -4,7 +4,7 @@
 $(function(){
 	//enter a number, click and get result
 	$("form").submit(function(event) {
-		event.preventDefault()
+		event.preventDefault() 
 		var userNumber = $('input').val()
 		userNumber = parseInt(userNumber)
 		console.log(userNumber)
@@ -19,7 +19,7 @@ $(function(){
 
 });
 
-function fizzCheck  (input){
+function fizzCheck  (input, fizz, buzz, fizzbuzz){
 
 	for(var i = 0; i < input; i++) {
 		if(input % 3 === 0) {
@@ -36,7 +36,7 @@ function fizzCheck  (input){
 
 } 
 
+
 //practice with Max. function person(name, age, profession) {
 // Max is 29 years old and is a teacher.
-	console.log(name + ' is ' + age + ' years old and is a ' + profession);
-}
+	//console.log(name + ' is ' + age + ' years old and is a ' + profession);
