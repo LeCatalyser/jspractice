@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="text-analyzer.css">
 </head>
 <body>
-    <div class="container">
+    <div class="js-results">
         <main>
             <h1>Text analzyer</h1>
             <p>Paste in text below, submit, and get some basic stats back.</p>
@@ -22,14 +22,16 @@
                 </div>
             </form>
 
-            <dl class="hidden text-report">
-                <dt>Word count</dt>
+
+
+            <dl class="js-results"><!-- i have my function as textAnalyser-->
+                <dt class="count">Word count</dt>
                 <dd></dd>
 
-                <dt>Unique word count</dt>
+                <dt class="unique">Unique word count</dt>
                 <dd></dd>
 
-                <dt>Average word length</dt>
+                <dt class="average">Average word length</dt>
                 <dd></dd>
             </dl>
         </main>
