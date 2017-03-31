@@ -24,12 +24,16 @@ function fizzCheck  (input, fizz, buzz, fizzbuzz){
 	for(var i = 0; i < input; i++) {
 		if (i % 5 === 0 && i % 3 ===0)  {
 			console.log(fizzbuzz);
+			$(".js-results").append("<div class='fizz-buzz-item fizzbuzz'><span>fizzbuzz</span></div>")
 		} else if (i % 5 === 0){
 			console.log(buzz);
+			$(".js-results").append("<div class='fizz-buzz-item buzz'><span>buzz</span></div>")
 		}  else if (i % 3 ===0 ){
 			console.log(fizz)
+			$(".js-results").append("<div class='fizz-buzz-item fizz'><span>fizz</span></div>")
 		} else {
 			console.log(i);
+			$(".js-results").append("<div class='fizz-buzz-item'><span>" + i + "</span> </div>")
 		}
 		
 	}
