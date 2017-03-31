@@ -12,7 +12,7 @@
         <main>
             <h1>Text analzyer</h1>
             <p>Paste in text below, submit, and get some basic stats back.</p>
-            <form class="form">
+            <form>
                 <div>
                     <label for="user-text">Text to analyze</label>
                     <textarea cols="60" rows="20" id="user-text" name="user-text" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." required></textarea>
@@ -24,15 +24,15 @@
 
 
 
-            <dl class="js-results"><!-- i have my function as textAnalyser-->
-                <dt class="count">Word count</dt>
-                <dd></dd>
+            <dl><!-- i have my function as textAnalyser-->
+                <dt> Word count:</dt>
+                <dd class="word-count"></dd>
 
-                <dt class="unique">Unique word count</dt>
-                <dd></dd>
+                <dt>Unique word count:</dt>
+                <dd class="unique"></dd>
 
-                <dt class="average">Average word length</dt>
-                <dd></dd>
+                <dt>Average word length:</dt>
+                <dd class="average"></dd>
             </dl>
         </main>
     </div>

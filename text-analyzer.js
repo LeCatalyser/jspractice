@@ -1,25 +1,37 @@
 $(function(){
-	$(".form").submit(function(event){
+	$("form").submit(function(event){
 		event.preventDefault();
 		var input = $("#user-text").val();
-	textAnalyser(input, uniqueWords, average,count);
+		textAnalyser(input);
 	});
 });
-//with help
+
+// text === "eli is cool"
+// text.length === 1
+// wordArray === ["Eli", "is", "cool"]
+//
 function textAnalyser(text) {
-	text.split(' ').length = text.split(' ');
-	var uniqueWords = 'Unique word count:'
+	//to count unique/specific words in input, need to examine each word and puts them into an array. it places them in an array and will examine later. 
+	var wordArray = text.split(' ');
+	var wordCount = wordArray.length;
+	// <js-results> 
+	$(".word-count").html(wordCount)
+
+	return;
+
+	var uniqueWords = 'Unique word count:' 
 	var average= 'Average word length:'
 	var	count= 'Word count:'
 	for(var i = 0; i < requirements.length; i++) {
 		if(requirements[i].average === 'average') {
 			console.log(average);
-  			$("js-results").append("<dl class='average'>)
-  		} if else (requirements[i].count === 'count') {
+  			$("js-results").append("<ddd class='word-count'>")
+  		} else if (requirements[i].count === 'count') {
   			console.log(count);
-  		} if else (requirements[i].uniqueWords === 'uniqueWords')
+  		} else if (requirements[i].uniqueWords === 'uniqueWords'){
   			console.log(uniqueWords);
-}
+  		}
+		
 	}
 }
 
@@ -27,15 +39,15 @@ var requirements = ['average','count', 'uniqueWords'];
 
 //on my own
 
-for(var i = 0; i < requirements.length; i++) {
-	if(requirements[i].average === 'average') {
-  	$('.js-results').append()
-  } if else (requirements[i].count === 'count') {
-  // do count
-  } if else (requirements[i].uniqueWords === 'uniqueWords')
-  // do unique words....
-}
+// for(var i = 0; i < requirements.length; i++) {
+// 	if(requirements[i].average === 'average') {
+//   	$('.js-results').append()
+//   } if else (requirements[i].count === 'count') {
+//   // do count
+//   } if else (requirements[i].uniqueWords === 'uniqueWords')
+//   // do unique words....
+// }
 
-for( var i = 0; i < words.length; i++){
-		var words uniqueWords averageWord= $(this).find("#user-text")
-		return(text.length)
+// for( var i = 0; i < words.length; i++){
+// 		var words uniqueWords averageWord= $(this).find("#user-text")
+// 		return(text.length)
