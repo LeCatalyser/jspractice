@@ -7,7 +7,7 @@ $(function(){
 		event.preventDefault() 
 		var userNumber = $('input').val()
 		userNumber = parseInt(userNumber)
-		console.log(userNumber)
+		//console.log(userNumber)
 		var fizz='fizz';
 		var buzz='buzz';
 		var fizzbuzz='fizzbuzz';
@@ -22,14 +22,14 @@ $(function(){
 function fizzCheck  (input, fizz, buzz, fizzbuzz){
 
 	for(var i = 0; i < input; i++) {
-		if(input % 3 === 0) {
-			alert(fizz);
-		} else if (input % 5 === 0){
-			alert (buzz);
-		} else if (input % 5 === 0 && input %3 ===0) {
-			alert (fizzbuzz);
+		if (i % 5 === 0 && i % 3 ===0)  {
+			console.log(fizzbuzz);
+		} else if (i % 5 === 0){
+			console.log(buzz);
+		}  else if (i % 3 ===0 ){
+			console.log(fizz)
 		} else {
-			alert ('not working');
+			console.log(i);
 		}
 		
 	}
