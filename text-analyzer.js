@@ -11,11 +11,28 @@ $(function(){
 // wordArray === ["Eli", "is", "cool"]
 //
 function textAnalyser(text) {
+
+	////////////////////////
+	// Word count section //
+	////////////////////////
+
 	//to count unique/specific words in input, need to examine each word and puts them into an array. it places them in an array and will examine later. 
-	var wordArray = text.split(' ');
+	var wordArray = text.split(' '); // wordArray is the card stack
 	var wordCount = wordArray.length;
 	// <js-results> 
 	$(".word-count").html(wordCount)
+
+	//////////////////////////
+	// Unique words section //
+	//////////////////////////
+
+	var words = {};
+	for (var i = 0; i < wordCount; i++){
+		var currentWord = wordArray[i];
+		// did we write down the word on the paper?
+		// if we have, add one tally mark
+		// else write down the word, and start it at one tally mark
+	}
 
 	return;
 
