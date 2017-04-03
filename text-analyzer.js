@@ -20,7 +20,7 @@ function textAnalyser(text) {
 	var wordArray = text.split(' '); // wordArray is the card stack
 	var wordCount = wordArray.length;
 	// <js-results> 
-	$(".word-count").text(wordCount)
+	$(".word-count").text(wordCount);
 
 	//////////////////////////
 	// Unique words section //
@@ -35,14 +35,18 @@ function textAnalyser(text) {
 		// else write down the word, and start it at one tally mark
 	}
 	var uniqueWords = Object.keys(words)//not building an array, it returns an array.  
-	$(".unique").text(uniqueWords.length)
-}
+	$(".unique").text(uniqueWords.length);
 
     //////////////////////////
 	// Average word length //
 	//////////////////////////
-
-
+	console.log(wordArray.length);
+	var averageCount = (wordArray.length / wordArray.join("").length);
+	console.log(averageCount);
+	$(".average").text(averageCount);
+}
+	//average length of ["abc", "a", "abc"]
+	//average length of this string is (3+1+2)/3
 
 	/*var uniqueWords = 'Unique word count:' 
 	var average= 'Average word length:'
