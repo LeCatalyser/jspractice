@@ -20,29 +20,36 @@ function textAnalyser(text) {
 	var wordArray = text.split(' '); // wordArray is the card stack
 	var wordCount = wordArray.length;
 	// <js-results> 
-	$(".word-count").html(wordCount)
+	$(".word-count").text(wordCount)
 
 	//////////////////////////
 	// Unique words section //
 	//////////////////////////
 
-	var words = {};
+	var words = {};//need to add current word to words object, [] notation. Set value to "anything"
 	for (var i = 0; i < wordCount; i++){
 		var currentWord = wordArray[i];
+		words[currentWord]= 1;
 		// did we write down the word on the paper?
 		// if we have, add one tally mark
 		// else write down the word, and start it at one tally mark
 	}
+	var uniqueWords = Object.keys(words)//not building an array, it returns an array.  
+	$(".unique").text(uniqueWords.length)
+}
 
-	return;
+    //////////////////////////
+	// Average word length //
+	//////////////////////////
 
-	var uniqueWords = 'Unique word count:' 
+
+
+	/*var uniqueWords = 'Unique word count:' 
 	var average= 'Average word length:'
 	var	count= 'Word count:'
 	for(var i = 0; i < requirements.length; i++) {
 		if(requirements[i].average === 'average') {
 			console.log(average);
-  			$("js-results").append("<ddd class='word-count'>")
   		} else if (requirements[i].count === 'count') {
   			console.log(count);
   		} else if (requirements[i].uniqueWords === 'uniqueWords'){
@@ -52,7 +59,7 @@ function textAnalyser(text) {
 	}
 }
 
-var requirements = ['average','count', 'uniqueWords'];
+var requirements = ['average','count', 'uniqueWords'];*/
 
 //on my own
 
