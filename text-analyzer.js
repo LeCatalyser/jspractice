@@ -26,6 +26,28 @@ function textAnalyser(text) {
 	// Unique words section //
 	//////////////////////////
 
+//staments end in ;
+// j = 4; k = 44; l = 0; 
+//
+//   stmt;
+//   stmt;
+//   stmt;
+//   if ( j === 4) {
+//      stmt;
+//      stmt;
+//      stmt;
+//   }
+
+//   if ( k === 4) {
+//      stmt;
+//      stmt;
+//      stmt;
+//   } 
+//   else if ( l === 3) {
+//      stmt;
+//      stmt;
+//      stmt;
+//   } 
 	var words = {};//need to add current word to words object, [] notation. Set value to "anything"
 	for (var i = 0; i < wordCount; i++){
 		var currentWord = wordArray[i];
